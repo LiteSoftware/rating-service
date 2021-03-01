@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class RatingPerformance extends Migration
+class CreatePerformanceMetricsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class RatingPerformance extends Migration
      */
     public function up()
     {
-        Schema::create('Rating', function (Blueprint $table) {
+        Schema::create('performance_metrics', function (Blueprint $table) {
             $table->id();
             $table->integer('model_id');
             $table->integer('test_id');
@@ -31,6 +31,6 @@ class RatingPerformance extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Rating');
+        Schema::dropIfExists('performance_metrics');
     }
 }

@@ -10,14 +10,14 @@ class RatingController extends Controller implements RatingControllerInterface
 {
     public function addResult(Request $request): JsonResponse
     {
-        /*Add result test device performance*/
+//        Add result test device performance
         return response()->json([
             'message' => 'Performance metrics added'
         ], 200);
     }
 
     public function getRating(Request $request) : JsonResponse {
-        /*Get rating table*/
+//        Get rating table
         return response()->json([
             'message' => 'view rating'
         ], 200);

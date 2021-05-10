@@ -17,10 +17,8 @@ class CreatePerformanceMetricsTable extends Migration
             $table->id();
             $table->integer('model_id');
             $table->integer('test_id');
-            $table->integer('step_id');
-            $table->text('value');
-            $table->integer('start_time');
-            $table->integer('end_time');
+            $table->integer('time');
+            $table->timestamp('added_at');
         });
     }
 

@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -18,7 +19,7 @@ class CreatePerformanceMetricsTable extends Migration
             $table->integer('model_id');
             $table->integer('test_id');
             $table->integer('time');
-            $table->timestamp('added_at');
+            $table->timestamp('passed_at')->useCurrent();
         });
     }
 
